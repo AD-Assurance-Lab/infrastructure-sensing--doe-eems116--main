@@ -1,0 +1,9 @@
+
+<launch>
+  
+  
+  <node name="cerpm_receiver" pkg="cerpm_data" type="receiver.py" output="screen" respawn="true"/>
+   
+
+</launch>
+

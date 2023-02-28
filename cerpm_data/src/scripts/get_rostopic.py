@@ -49,3 +49,4 @@ with file:
         write = csv.writer(file)
         write.writerow(["time", "cerpm_id", "lat", "long", "RSSI", "SNR"]) 
         write.writerows(cerpm_info) 
+        
