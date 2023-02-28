@@ -37,7 +37,7 @@ void loop() {
 *   - RF_PACONFIG_PASELECT_RFO     -- LoRa single output via RFO_HF / RFO_LF, maximum output 14dBm
 */
   LoRa.setTxPower(14,RF_PACONFIG_PASELECT_PABOOST);
-  LoRa.print("ARE01,35.954938037804745,-84.15289994213487,");
+  LoRa.print("CERPM_,35.954938037804745,-84.15289994213487,");
   LoRa.print(counter);
   LoRa.endPacket();
   
