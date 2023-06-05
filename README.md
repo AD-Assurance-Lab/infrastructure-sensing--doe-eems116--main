@@ -40,7 +40,8 @@ If this does not work use the following.
 		sudo chown <username> <port path>	i.e. port path = ttyUSB0 
 		exit
 		
-Make sure the files are executeable 
+If the files are not executeable change permission
+		
 		sudo chmod +x <file>
 
 ## 4. Launching cerpm ROS package
