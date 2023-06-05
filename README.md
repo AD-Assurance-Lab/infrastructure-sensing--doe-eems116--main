@@ -39,6 +39,9 @@ If this does not work use the following.
 		cd dev/
 		sudo chown <username> <port path>	i.e. port path = ttyUSB0 
 		exit
+		
+Make sure the files are executeable 
+		sudo chmod +x <file>
 
 ## 4. Launching cerpm ROS package
 To launch the cerpm make sure the workspace is souced and you should be able to launch in any directory. 
