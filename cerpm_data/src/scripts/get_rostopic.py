@@ -3,6 +3,8 @@
 import rospy 	#imporitng ROS commands
 import time
 import csv
+import numpy as np
+
 
 from cerpm_data.msg import cerpm_receiver	# importing the custom message
 
@@ -21,12 +23,16 @@ def callback(msg):
     id = msg.id
     lat = msg.latitude
     long = msg.longitude
+    alt = msg.altitude
     rssi = msg.receiver_signal_strength 
     snr = msg.SNR
 
-    cerpm_info.append([ t, id, lat, long, rssi, snr ])
+    # cerpm_info.append([ t, id, lat, long, rssi, snr ])
+    cerpm_info.append([ t, id, lat, long, alt, rssi, snr ])
 
-    print("\nTime:", t, "\nCERPM_id:", id, "\nLatitude:", lat, "\nLongitude:", long, "\nRSSI:", rssi, "\nSNR:", snr)
+    # print("\nTime:", t, "\nCERPM_id:", id, "\nLatitude:", lat, "\nLongitude:", long, "\nRSSI:", rssi, "\nSNR:", snr)
+
+    print("\nTime:", t, "\nCERPM_id:", id, "\nLatitude:", lat, "\nLongitude:", long, "\nAltitude:", alt, "\nRSSI:", rssi, "\nSNR:", snr)
 
     rate.sleep()
 
@@ -41,12 +47,3 @@ try:
     
 except rospy.ROSInterruptException:
     print("exited")
-
-# file = open('cerpm_lane_info.csv', 'a+')  # Uncomment if you want to append to the existing csv file
-file = open('cerpm_lane_info.csv', 'w') # Uncomment if you want to overwrite the existing file created
-
-with file:
-        write = csv.writer(file)
-        write.writerow(["time", "cerpm_id", "lat", "long", "RSSI", "SNR"]) 
-        write.writerows(cerpm_info) 
-        

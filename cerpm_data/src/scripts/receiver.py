@@ -2,7 +2,7 @@
 
 import rospy 	#imporitng ROS commands
 import serial.tools.list_ports	#import serial library to read in the serial ports
-
+import re 
 from std_msgs.msg import Header		# importing ROS standard message
 from cerpm_data.msg import cerpm_receiver	# importing the custom message
 
@@ -40,6 +40,7 @@ print("\nThe cerpm is now working")
 #decode data coming in from the serial port
 try:
 	while not rospy.is_shutdown():
+		
 		if serialInst.in_waiting:
 			packet = serialInst.readline()
 			infoString = (packet.decode('utf'))
@@ -51,12 +52,15 @@ try:
 			cerpm.id = list_of_info[0]
 			cerpm.latitude = float( list_of_info[1] )
 			cerpm.longitude = float( list_of_info[2] )
-			cerpm.receiver_signal_strength = float( list_of_info[4] )
-			cerpm.SNR = float( list_of_info[5] )
-
+			cerpm.altitude = float( list_of_info[3] )
+			cerpm.receiver_signal_strength = float(list_of_info[4].split('-')[1])
+			str = list_of_info[5]
+			x = re.findall('[0-9]+',str)
+			cerpm.SNR = float(x[0]+'.' +x[1])
 			cerpm_pub.publish(cerpm)
 
 	rate.sleep()
 
 except rospy.ROSInterruptException:
 	print("Interrupted!")
+
