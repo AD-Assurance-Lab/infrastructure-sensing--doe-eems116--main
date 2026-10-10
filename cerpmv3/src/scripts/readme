@@ -1,0 +1,15 @@
+
+0) First generate the lookup table using the resample map.py script for 
+appropriate distance seperation for Tx. This can be done on waypoints that 
+have been saved before which makes it easier.
+
+1) Run the roslaunch cerpmv3 cerpm_collect if the Rx is connected and 
+   you want to read in the cerpms and save them.
+
+2) If you have already done step one, you can run the get_cerpms to save all the cerpms with their lat/lon from the lookup table.
+
+3) Once you have cerpms saved in the csv with their lat/long, we need to run the get_path which also runs the 
+get_cerpm as a subprocess so you can skip step 2. 
+
+4) 
+

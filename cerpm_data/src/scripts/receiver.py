@@ -42,22 +42,25 @@ try:
 	while not rospy.is_shutdown():
 		
 		if serialInst.in_waiting:
+			
 			packet = serialInst.readline()
-			infoString = (packet.decode('utf'))
-			list_of_info = infoString.split(',')
 
-			# custom ROS message
-			cerpm = cerpm_receiver()
-			cerpm.header = Header(stamp=rospy.Time.now(), frame_id="cerpm")
-			cerpm.id = list_of_info[0]
-			cerpm.latitude = float( list_of_info[1] )
-			cerpm.longitude = float( list_of_info[2] )
-			cerpm.altitude = float( list_of_info[3] )
-			cerpm.receiver_signal_strength = float(list_of_info[4].split('-')[1])
-			str = list_of_info[5]
-			x = re.findall('[0-9]+',str)
-			cerpm.SNR = float(x[0]+'.' +x[1])
-			cerpm_pub.publish(cerpm)
+			if packet:
+				infoString = (packet.decode('utf'))
+				list_of_info = infoString.split(',')
+
+				# custom ROS message
+				cerpm = cerpm_receiver()
+				cerpm.header = Header(stamp=rospy.Time.now(), frame_id="cerpm")
+				cerpm.id = list_of_info[0]
+				cerpm.latitude = float( list_of_info[1] )
+				cerpm.longitude = float( list_of_info[2] )
+				cerpm.altitude = float( list_of_info[3] )
+				cerpm.receiver_signal_strength = -float(list_of_info[4].split('-')[1])
+				str = list_of_info[5]
+				x = re.findall('[0-9]+',str)
+				cerpm.SNR = float(x[0]+'.' +x[1])
+				cerpm_pub.publish(cerpm)
 
 	rate.sleep()
 

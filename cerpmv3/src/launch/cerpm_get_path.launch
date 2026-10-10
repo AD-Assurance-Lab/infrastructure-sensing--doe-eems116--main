@@ -1,0 +1,7 @@
+
+<launch>
+ 
+  <node name="cerpm_get_path" pkg="cerpmv3" type="get_path.py" output="screen" respawn="false"/>
+
+</launch>
+

@@ -1,0 +1,7 @@
+
+<launch>
+ 
+  <node name="cerpm_rxsend" pkg="cerpmv3" type="rec_and_send.py" output="screen" respawn="true"/>
+
+</launch>
+
