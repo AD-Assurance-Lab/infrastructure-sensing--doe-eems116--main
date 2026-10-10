@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg='kia_niro_speed' type='get_can_info.py' name='kia_speed_driver' respawn="true"/>
+
+</launch>

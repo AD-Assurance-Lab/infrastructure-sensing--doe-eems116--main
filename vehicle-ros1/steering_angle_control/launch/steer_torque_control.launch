@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="steering_angle_control" type="steer_torque_control_node" name="steer_torque_control_node" output="screen">
+        <param name="controller_rate" type="int" value="100"/>
+    </node>
+
+</launch>

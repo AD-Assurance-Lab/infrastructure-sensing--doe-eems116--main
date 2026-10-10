@@ -1,0 +1,9 @@
+<launch>
+
+    <node pkg="steering_angle_control" type="can_speed_publisher.py" name="speed_pub_node" output="screen"/>
+    <node pkg="steering_angle_control" type="angle_ctrl_mobileye.py" name="steering_angle_node" output="screen"/>
+    <!-- <node pkg="steering_angle_control" type="angle_ctrl_correct.py" name="steering_correct_node" output="screen"/> -->
+    <node pkg="steering_angle_control" type="mobileye_lka.py" name="stanley_node" output="screen"/>
+    <node pkg="steering_angle_control" type="long_pid.py" name="pidlong_node" output="screen"/>
+   
+</launch>

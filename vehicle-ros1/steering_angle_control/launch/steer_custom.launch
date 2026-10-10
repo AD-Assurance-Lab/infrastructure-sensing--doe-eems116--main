@@ -1,0 +1,8 @@
+<launch>
+
+    <node pkg="steering_angle_control" type="can_speed_publisher.py" name="speed_pub_node" output="screen"/>
+    <node pkg="steering_angle_control" type="steering_angle_control.py" name="steering_angle_node" output="screen"/>
+    <node pkg="steering_angle_control" type="stanley_waypoint_follow_speed.py" name="stanley_node" output="screen"/>
+    <node pkg="steering_angle_control" type="long_pid.py" name="pidlong_node" output="screen"/>
+    <node pkg="steering_angle_control" type="heading_pid.py" name="pidheading_node" output="screen"/>
+</launch>
