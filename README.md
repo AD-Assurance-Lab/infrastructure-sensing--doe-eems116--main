@@ -38,7 +38,7 @@ All recordings (ROS 1 bags, camera frames, power analyzer logs; 29 GB) are on Hu
 
 ## Publications
 
-1. Kadav, Sharma, Fanas Rojas, Patil, Wang, Ekti, Meyer, Asher. "Development and Evaluation of
+1. Sharma, Ekti, Fanas Rojas, Brown, Pesin, Wang, Huff, LaClair, Asher, Meyer. "Development and Evaluation of
    Chip-Enabled Raised Pavement Markers for Lane Line Detection." 2022 IEEE Sensors.
    <https://doi.org/10.1109/SENSORS52175.2022.9967036>
 2. Sharma, Fanas Rojas, Ekti, Wang, Asher, Meyer. "Vehicle Lateral Offset Estimation Using
@@ -47,20 +47,20 @@ All recordings (ROS 1 bags, camera frames, power analyzer logs; 29 GB) are on Hu
 3. Carow, Kadav, Patil, Fanas Rojas, Asher. "Projecting Lane Lines from Proxy High-Definition Maps for Automated Vehicle Perception in
    Road-Occluded Scenarios." SAE Technical Paper 2023-01-0051.
    <https://doi.org/10.4271/2023-01-0051>
-4. Brown, Motallebiaraghi, Fanas Rojas, Ayantayo, Meyer, Ekti, Wang, Goberville, Feinberg,
-   Asher. "Evaluation of Autonomous Vehicle Sensing and Compute Load on a Chassis
+4. Brown, Motallebiaraghi, Fanas Rojas, Ayantayo, Meyer, Asher, Ekti, Wang, Goberville,
+   Feinberg. "Evaluation of Autonomous Vehicle Sensing and Compute Load on a Chassis
    Dynamometer." 2023 IEEE ITSC. <https://doi.org/10.1109/ITSC57777.2023.10422013>
 5. Kadav, Sharma, Fanas Rojas, Patil, Wang, Ekti, Meyer, Asher. "Automated Lane Centering: An
    Off-the-Shelf Computer Vision Product vs. Infrastructure-Based Chip-Enabled Raised
    Pavement Markers." Sensors 24(7), 2327 (2024). <https://doi.org/10.3390/s24072327>
-6. Brown, Patil, Kadav, Sharma, Fanas Rojas, Meyer, Hong, Liao, Ekti, Wang, Asher. "Real World
+6. Brown, Patil, Sharma, Kadav, Fanas Rojas, Hong, Liao, Ekti, Wang, Meyer, Asher. "Real World
    Use Case Evaluation of Radar Retro-reflectors for Autonomous Vehicle Lane Detection
    Applications." SAE Technical Paper 2024-01-2042. <https://doi.org/10.4271/2024-01-2042>
-7. Masterson, Patil, Brown, Fanas Rojas, Anderson, Walker, Rabinowitz, Asher. "Engineering
+7. Masterson, Patil, Brown, Asher, Fanas Rojas, Siems-Anderson, Walker, Rabinowitz. "Engineering
    Requirements that Address Real World Hazards from Using High-Definition Maps, GNSS, and
    Weather Sensors in Autonomous Vehicles." SAE Technical Paper 2024-01-2044.
    <https://doi.org/10.4271/2024-01-2044>
-8. Patil, Kadav, Fanas Rojas, Sharma, Masterson, Brown, Wang, Liao, Ekti, Asher. "Assessing
+8. Patil, Fanas Rojas, Kadav, Sharma, Masterson, Wang, Ekti, Liao, Brown, Asher. "Assessing
    Resilience in Lane Detection Methods: Infrastructure-Based Sensors and Traditional
    Approaches for Autonomous Vehicles." SAE Technical Paper 2024-01-2039.
    <https://doi.org/10.4271/2024-01-2039>
