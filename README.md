@@ -31,7 +31,7 @@ are DriveU's and are not released.
 
 ## Data
 
-All recordings (ROS 1 bags, camera frames, power analyzer logs; 29 GB) are on Hugging Face:
+All recordings (ROS 1 bags, camera frames, power analyzer logs; 37 GB) are on Hugging Face:
 <https://huggingface.co/datasets/AD-Assurance-Lab/infrastructure-sensing-doe-eems116>
 
     hf download AD-Assurance-Lab/infrastructure-sensing-doe-eems116 --repo-type dataset --local-dir ./data
